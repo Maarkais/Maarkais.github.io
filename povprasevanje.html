@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="sl-SL">
+    <head>
+        <!-- Meta oznake -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="spletišče, uvoz, avtomobili, vozila, uvoz vozil, luksuzna vozila">
+        <meta name="description" content="V najkrajšem možnem času vam po naročilu uvozimo vozilo iz Nemčije, Švice, Švedske... Omogočamo tudi najem luksuznih vozil iz naše zaloge.">
+        <meta name="author" content="Martin Rek">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- Naslov spletne strani -->
+        <title>Markisa Imports | Uvoz vozil po naročilu</title>
+
+        <!-- Ikona spletne strani -->
+        <link rel="icon" type="image/x-icon" href="slike/index/logo/logo.png">
+
+        <!-- CSS Link -->
+        <link rel="stylesheet" href="slog.css">
+
+        <!-- Ikone Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <header id="header">
+            <div class="logo-div">
+                <a href="index.html"><img class="logo" src="slike/index/logo/logo.png" alt="logo"></a>
+            </div>
+            
+            <nav class="topnav"> 
+                <ul class="nav-list-sidebar" id="sidebar">
+                    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a href="uvoz.html">Uvoz vozil</a></li>
+                    <li><a href="najem.html">Najem vozil</a></li>
+                    <li><a href="dmv.html">Izračun DMV</a></li>
+                    <li><a href="financiranje.html">Financiranje</a></li>
+                    <li><a href="zavarovanja.html">Zavarovanja</a></li>
+                    <li><a href="o-nas.html">O nas</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a class="cta-sidebar" href="povprasevanje.html"><button class="cta-button-sidebar">Povpraševanje</button></a></li>
+                </ul>
+
+                
+                <ul class="nav-list" id="navbar">
+                    <li class="hideOnMobile"><a href="uvoz.html">Uvoz vozil</a></li>
+                    <li class="hideOnMobile"><a href="najem.html">Najem vozil</a></li>
+                    <li class="hideOnMobile"><a href="dmv.html">Izračun DMV</a></li>
+                    <li class="hideOnMobile"><a href="financiranje.html">Financiranje</a></li>
+                    <li class="hideOnMobile"><a href="zavarovanja.html">Zavarovanja</a></li>
+                    <li class="hideOnMobile"><a href="o-nas.html">O nas</a></li>
+                    <li class="hideOnMobile"><a href="kontakt.html">Kontakt</a></li>
+                    <li class="hideOnMobile"><a class="cta active" href="povprasevanje.html"><button class="cta-button">Povpraševanje</button></a></li>
+                    <li onclick=showSidebar() class="menu-button-li"><a href="#"><svg class="menu-button" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <h1>Povpraševanje</h1>
+            <p>Pošljite povpraševanje za uvoz vozila po vaših željah. Kontaktirajte Markisa Imports zdaj.</p>
+        </div>
+
+        <div class="content">
+            <div class="container">
+                <section class="inquiry-form-section">
+                        <h2>Pošljite Povpraševanje</h2>
+                        <h3>Vaši podatki</h3>
+                        <form class="inquiry-form">
+                            <div class="form-group">
+                                <label for="name">Ime:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="email">E-pošta:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="phone">Telefon:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <br>
+                            <h3>Podatki vozila</h3>
+                            <div class="form-group">
+                                <label for="car-type">Vrsta Vozila:</label>
+                                <select id="car-type" name="car-type" required>
+                                    <option value="limuzina">Limuzina</option>
+                                    <option value="karavan">Karavan</option>
+                                    <option value="suv">SUV</option>
+                                    <option value="coupe">Coupe</option>
+                                    <option value="cabriolet">Cabriolet</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fuel">Gorivo:</label>
+                                <select id="fuel" name="fuel" required>
+                                    <option value="diesel">Diesel</option>
+                                    <option value="bencin">Bencin</option>
+                                    <option value="hibrid">Hibrid</option>
+                                    <option value="elektrika">Elektrika</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="transmission">Menjalnik:</label>
+                                <select id="transmission" name="transmission" required>
+                                    <option value="avtomatski">Avtomatski</option>
+                                    <option value="ročni">Ročni</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="color">Barva:</label>
+                                <input type="text" id="color" name="color" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="car-make">Znamka vozila:</label>
+                                <input type="text" id="car-make" name="car-make" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="car-model">Model vozila:</label>
+                                <input type="text" id="car-model" name="car-model" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="year">Leto izdelave:</label>
+                                <input type="number" id="year" name="year" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="budget">Proračun (€):</label>
+                                <input type="number" id="budget" name="budget" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="purchase-method">Način Nakupa:</label>
+                                <select id="purchase-method" name="purchase-method" required>
+                                    <option value="takojšnje plačilo">Takojšnje Plačilo</option>
+                                    <option value="kredit">Kredit</option>
+                                    <option value="leasing">Leasing</option>
+                                    <option value="po dogovoru">Po Dogovoru</option>
+                                </select>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="additional-info">Dodatne informacije:</label>
+                                <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+                            </div>
+        
+                            <button type="submit" class="cta-button">Pošlji</button>
+                        </form>
+                </section>
+                
+            </div>
+        </div>
+        <button onclick="scrollToTop()" id="scrollBtn"><img src="slike/index/index/up-arrow.png" alt="arrow-gor"></button>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="pg-footer">
+            <footer class="footer">
+                <svg class="footer-wave-svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+                    <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+                </svg>
+
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>Kontaktne Informacije</h3>
+                        <p>Naslov: Trg Republike 3, 1000 Ljubljana, Slovenija.</p>
+                        <p>Telefon: +386 1 234 5678</p>
+                        <p>E-pošta: info@markisaimports.si</p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Povezave</h3>
+                        <ul class="footer-connection-list">
+                            <li><a href="index.html">Domov</a></li>
+                            <li><a href="uvoz.html">Uvoz vozil</a></li>
+                            <li><a href="najem.html">Najem vozil</a></li>
+                            <li><a href="dmv.html">Izračun DMV</a></li>
+                            <li><a href="financiranje.html">Financiranje</a></li>
+                            <li><a href="zavarovanja.html">Zavarovanja</a></li>
+                            <li><a href="o-nas.html">O nas</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                            <li><a href="povprasevanje.html">Povpraševanje</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Socialna omrežja</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="footer-copyright">
+                    <div class="footer-copyright-wrapper">
+                        <p class="footer-copyright-text">
+                            <a class="footer-copyright-link" href="#" target="_self"> &copy;2024. | Markiša Imports </a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.getElementById('sidebar');
+            sidebar.style.display = 'flex';
+        }
+
+        function hideSidebar(){
+            const sidebar = document.getElementById('sidebar');
+            sidebar.style.display = 'none';
+        }
+
+        window.onscroll = function() {sticky(), scrollFunction()};
+        var header = document.getElementById("header");
+        function sticky() {
+            if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        }
+        
+
+
+        let scroll = document.getElementById("scrollBtn");
+        function scrollFunction() {
+            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+              scroll.style.display = "block";
+            } else {
+              scroll.style.display = "none";
+            }
+          }
+
+
+        
+        function scrollToTop() {
+            const scrollToTopButton = document.documentElement;
+            scrollToTopButton.scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+    </script>
+</html>

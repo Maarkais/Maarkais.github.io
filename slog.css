@@ -1,0 +1,883 @@
+/*Logo*/
+
+.logo{
+    height:100px;
+    margin-right: 20px;
+}
+
+.logo-div a{
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*body + header*/
+
+
+body{
+    margin:0;
+    padding:0;
+    background-color: white;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: white;
+    box-shadow: 3px 3px 15px red;
+    z-index: 998;
+}
+
+/*button za scroll na top strani*/
+
+#scrollBtn {
+    display:none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width:4%;
+}
+
+#scrollBtn img{
+    width:100%;
+}
+
+#scrollBtn:hover {
+    background-color: darkred;
+}
+
+/*navigacija*/
+
+.sticky{
+    position:sticky;
+    top:0;
+    animation: slideDown 0.5s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    position: relative; /* Add this line */
+    display: inline-block;
+    
+}
+
+nav ul li a.active{
+    color:red;
+}
+
+.nav-list-sidebar{
+    margin-top:0px;
+}
+
+.nav-list-sidebar, .nav-list{
+    list-style: none;
+    display:flex;
+    align-items:center;
+}
+
+
+
+.nav-list-sidebar li{
+    padding: 0 1em;
+    text-align:center;
+}
+
+.nav-list-sidebar li a{
+    display:block;
+    padding:10px;
+    transition: all .03s ease 0s;
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-list li a::after, .nav-list-sidebar li a::after{
+    content: '';
+    position: absolute;
+    height:2px;
+    width:0%;
+    background-color: red;
+    left:50%;
+    bottom: 0;
+    transition: all 0.3s ease-out;
+    transform: translateX(-50%);
+}
+
+.nav-list li a:hover::after, .nav-list-sidebar li a:hover::after{
+    width:100%;
+}
+
+.nav-list li a:hover, .nav-list-sidebar li a:hover{
+    color: red;   
+}
+
+
+.cta-button, .cta-button-sidebar{
+    outline: none;
+    font-size: 14px;
+    padding: 9px 25px;
+    border:2px solid grey;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    text-align: center;
+    background-color: transparent;
+
+}
+
+.cta-button:hover, .cta-button-sidebar:hover{
+    color: #fff;
+    background-color: #616467;
+}
+
+.nav-list-sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index:999;
+    background-color: rgba(255, 255, 255, 0.164);
+    display:none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+}
+
+.nav-list-sidebar li{
+    width: 100%;
+    margin-top: 5px;
+    margin-left: -30px;
+}
+
+.nav-list-sidebar a{
+    width: 50%;
+    padding:0;
+    margin: auto;
+}
+
+.menu-button{
+    display:block;
+}
+
+.menu-button:hover{
+    background-color: red;
+}
+
+
+
+/*check za širino ekrana*/
+
+@media(max-width: 1061px){
+    .hideOnMobile{
+        display:none;
+    }
+    .nav-list-sidebar{
+        display:none;
+        flex-direction:column;
+        align-items:center;
+    }
+    body{
+        width:100%;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .dmv-form, .contact-form {
+        padding: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .financing-list{
+        flex-direction: column;
+    }
+
+    .team-list {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    .vehicle-list{
+        flex-direction: column;
+    }
+
+
+}
+
+@media(min-width: 1061px){
+    .menu-button{
+        display:none;
+    }
+    .menu-button-li{
+        display:none;
+    }
+}
+
+
+/*footer*/
+.pg-footer {
+    font-family: 'Roboto', sans-serif;
+}
+  
+  
+.footer {
+    background-color: darkgrey;
+    color: #fff;
+}
+.footer-wave-svg {
+    background-color: transparent;
+    display: block;
+    height: 30px;
+    position: relative;
+    top: -1px;
+    width: 100%;
+}
+.footer-wave-path {
+    fill: white;
+}
+  
+.footer-content {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+    margin-bottom:20px;
+}
+
+.footer-column:last-child {
+    margin-right: 0;
+}
+
+.footer-connection-list li a{
+    text-decoration: none;
+    color:white;
+}
+
+.footer-connection-list li a:hover{
+    color:red;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color:rgba(0, 0, 0, 0.5);
+}
+
+.footer-column p {
+    margin: 5px 0;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.social-icons a:hover {
+    color:red;
+}
+
+.social-icons i {
+    font-size: 24px;
+}
+
+
+  
+.footer-copyright {
+    background-color: grey;
+    color: #fff;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+.footer-copyright-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+.footer-copyright-text {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.footer-copyright-link {
+    color: #fff;
+    text-decoration: none;
+}
+  
+
+/*hero*/
+
+.hero{
+    background: url('slike/index/index/car.jpg') no-repeat center center/cover;
+    height: 600px;
+    text-align: center;
+    margin-top: 4px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.hero h1{
+    color:white;
+    font-weight:500;
+    font-size: 4em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:0;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero p{
+    color:white;
+    font-size: 1.5em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px 0 0;
+}
+    
+
+
+
+
+/*content*/
+
+.content {
+    padding: 20px;
+    background-color: white;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text, .image {
+    flex: 1;
+    padding: 10px;
+}
+
+.text h2{
+    font-size: 2em;
+}
+
+.text p{
+    font-size: 1.1em;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+/*section content*/
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section p, section ul, section ol {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+blockquote {
+    background-color: #eee;
+    padding: 1rem;
+    border-left: 5px solid #ff6600;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+.faq h3 {
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+}
+
+/* DMV  */
+.dmv-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dmv-form label {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dmv-form input, 
+.dmv-form select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dmv-form button {
+    margin-top: 1rem;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.dmv-form button:hover {
+    background-color: #e65c00;
+}
+
+/* FAQ vprasanja */
+.faq .question {
+    margin-bottom: 1.5rem;
+}
+
+.faq h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* obrazec za kontakt */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    margin-top: 1rem;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e65c00;
+}
+
+/* Vehicle Types Section */
+.vehicle-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.vehicle {
+    flex: 1 1 calc(33.333% - 2rem);
+    text-align: center;
+}
+
+.vehicle img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.vehicle h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.vehicle p {
+    margin-top: 0.5rem;
+}
+
+/* tabela cen */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.pricing-table th, .pricing-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.pricing-table th {
+    background-color: #f4f4f4;
+}
+
+.pricing-table td {
+    background-color: #fff;
+}
+
+/* financiranje */
+.financing-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.financing-option {
+    flex: 1 1 calc(33.333% - 2rem);
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.financing-option h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.financing-option p {
+    margin-top: 0.5rem;
+}
+
+
+/* zavarovanja */
+.insurance-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.insurance-option {
+    flex: 1 1 calc(33.333% - 2rem);
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.insurance-option h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.insurance-option p {
+    margin-top: 0.5rem;
+}
+
+
+
+/* o nas */
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.team-member {
+    flex: 1 1 calc(33.333% - 2rem);
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.team-member img {
+    width: 25%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.team-member p {
+    margin-top: 0.5rem;
+}
+
+
+
+/* forma */
+.inquiry-form-section {
+    background-color: white;
+    padding: 2rem 0;
+}
+
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.inquiry-form button {
+    margin-top: 1rem;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.inquiry-form button:hover {
+    background-color: #e65c00;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+
+
+/*grid za najem vozil*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.car-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.car-item img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+}
+
+.car-item h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.car-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+
+
+/* forma za najem, ker prejsnja ni delala */
+#rental-form-section {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+#rental-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#rental-form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#rental-form input,
+#rental-form select,
+#rental-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+#rental-form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#rental-form button:hover {
+    background-color: #0056b3;
+}
